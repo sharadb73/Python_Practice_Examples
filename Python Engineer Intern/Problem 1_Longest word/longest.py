@@ -7,6 +7,7 @@ def findlongestword():
     paragraph = file.read().split("\n")
 
     maxlen = -1
+    longestword = ""
     for para in paragraph:
         if len(para) > maxlen:
             maxlen = len(para)
@@ -15,12 +16,11 @@ def findlongestword():
             parawords = maxpara.split()
 
             longwordlen = -1
-            longestword = ""
             for longw in parawords:
                 if len(longw) > longwordlen:
                     longwordlen = len(longw)
                     longestword = longw
-            print(longestword)
+    print(longestword)
 
 
 
